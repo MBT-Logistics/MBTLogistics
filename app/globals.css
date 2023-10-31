@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Krub:wght@500&family=Rubik:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Krub", sans-serif;
+}
+
+.heading {
+  font-family: "Rubik", sans-serif;
+}
+
+.flexCenter {
+  @apply flex justify-center items-center;
+}
+
+.flexBetween {
+  @apply flex justify-between items-center;
+}
+
+.flexStart {
+  @apply flex items-center justify-start;
+}
+
+.text-small {
+  @apply font-normal;
+  font-size: 17px;
+}
+
+.paddings {
+  @apply lg:px-20 py-6 px-5;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 12px;
+}
+
+/* START: Footer styles */
+.footer {
+  @apply flex flex-col text-black-100 mt-5 border-t border-gray-100;
+}
+
+.footer__links-container {
+  @apply flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10;
+}
+
+.footer__rights {
+  @apply flex flex-col justify-start items-start gap-6;
+}
+
+.footer__links {
+  @apply flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-20;
+}
+
+.footer__link {
+  @apply flex flex-col gap-6 text-sm min-w-[170px];
+}
+
+.footer__copyrights {
+  @apply flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10;
+}
+
+.footer__copyrights-link {
+  @apply flex-1 flex sm:justify-end text-sm justify-center max-sm:mt-4 gap-10;
+}
+/* END: Footer styles */
+
+/* Form Field */
+.form_field-input {
+  @apply w-full outline-0 rounded-xl p-4;
+}
+
+/* Navbar */
+.navbar {
+  @apply py-3 border-b border-nav-border gap-4;
+}
+
+@layer components {
+  .container {
+    @apply max-w-full w-[1440px] px-10 mx-auto;
+  }
+
+  .hero_section {
+    @apply bg-hero-bg bg-no-repeat bg-center bg-cover overflow-hidden;
+    height: 110vh;
+  }
+
+  .whyus_section {
+    @apply bg-whyus-bg bg-no-repeat bg-center bg-cover overflow-hidden;
+    height: 80vh;
+  }
+
+  .whychoose_section {
+    @apply bg-mapbg bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+
+  .contact_section {
+    @apply bg-contact-bg bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+
+  .service_section {
+    @apply bg-service-bg bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+
+  .aboutus_section {
+    @apply bg-aboutus-bg bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+
+  .clients_section {
+    @apply bg-clients-bg bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+
+  .team_section {
+    @apply bg-team-bg bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+
+  .track_section {
+    @apply bg-track-bg bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+
+  .track2_section {
+    @apply bg-track2-bg bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+
+  .network_section {
+    @apply bg-map-bg bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+
+  .bluegradient {
+    @apply bg-bluebg bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+
+  .bluegradientsm {
+    @apply bg-bluebgsm bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+
+  .graygradient {
+    @apply bg-graybg bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+
+  .graygradientsm {
+    @apply bg-graybgsm bg-no-repeat bg-center bg-cover overflow-hidden;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  border: 1px solid #a3a3a3 !important;
+  opacity: 100% !important;
+  background: #fff !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0067ff !important;
+  border: none !important;
+}
+
+.swiper {
+  padding-bottom: 70px !important;
+}
+
+.swiper-slide.swiper-slide-next {
+  background: #091242;
+  border-radius: 12px;
+  box-shadow: 0px 20px 70px rgba(0, 183, 255, 0.3) !important;
+}
+
+.swiper-slide.swiper-slide-next h4,
+.swiper-slide.swiper-slide-next p {
+  color: #fff !important;
+}
+
+.swiper-pagination {
+  top: 90% !important;
+}
