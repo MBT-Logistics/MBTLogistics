@@ -404,13 +404,12 @@ export const morecenters = [
   },
   {
     name: "BANGALORE",
-    address: "GGP Colony, Rasulgarh, Bhubaneswar, Odisha - 751010",
+    address: "4th Main Road, IIIrd Cross, Chamrajpet, Bangalore, Karnataka - 560018",
     email: "bangalore@mbtlogistics.com",
   },
   {
     name: "BHUBANESWAR",
-    address:
-      "4th Main Road, IIIrd Cross, Chamrajpet, Bangalore, Karnataka - 560018",
+    address: "GGP Colony, Rasulgarh, Bhubaneswar, Odisha - 751010",
     email: "bhubaneswar@mbtlogistics.com",
   },
   {
