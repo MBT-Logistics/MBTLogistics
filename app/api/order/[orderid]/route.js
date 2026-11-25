@@ -23,8 +23,6 @@ export const GET = async (request, { params }) => {
         chargedweight: o.chargedweight,
         deliverytype: o.deliverytype,
         status: o.status,
-        updated: o.updated,
-        history: o.history || [],
       }),
       { status: 200, headers: { "Content-Type": "application/json" } }
     );
