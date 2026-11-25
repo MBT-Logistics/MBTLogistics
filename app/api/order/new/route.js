@@ -2,6 +2,9 @@ import Order from "@/models/order";
 import { connectToDB } from "@/utils/database";
 
 export const POST = async (request) => {
+  const body = await request.json();
+  if (!process.env.MBT_SYNC_KEY || body.key !== process.env.MBT_SYNC_KEY)
+    return new Response("Unauthorized", { status: 401 });
   const {
     orderid,
     dateofbooking,
@@ -11,7 +14,7 @@ export const POST = async (request) => {
     chargedweight,
     status,
     deliverytype,
-  } = await request.json();
+  } = body;
 
   try {
     await connectToDB();

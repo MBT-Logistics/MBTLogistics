@@ -24,9 +24,9 @@ const Track = () => {
     setLoading(true);
 
     const data = {
-      orderid: String(e.target.orderid.value),
+      orderid: String(e.target.orderid.value).trim(),
     };
-    const response = await fetch(`/api/order/${data.orderid}`, {
+    const response = await fetch(`/api/order/${encodeURIComponent(data.orderid)}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const Track = () => {
                       <div className="grid grid-cols-1">
                         <input
                           type="text"
-                          placeholder="LR Number*"
+                          placeholder="GR Number*"
                           className="border-2 border-testibg sm:py-4 py-3 px-5 sm:placeholder:text-lg placeholder:text-sm"
                           size={40}
                           id="orderid"

@@ -6,34 +6,15 @@ const OrderSchema = new Schema({
     unique: [true, "Order already exists!"],
     required: [true, "Order ID id required"],
   },
-  dateofbooking: {
-    type: String,
-    required: true,
-  },
-  originstation: {
-    type: String,
-    required: true,
-  },
-  deliverystation: {
-    type: String,
-    required: true,
-  },
-  noofpackages: {
-    type: Number,
-    required: true,
-  },
-  chargedweight: {
-    type: String,
-    required: true,
-  },
-  status: {
-    type: String,
-    required: true,
-  },
-  deliverytype: {
-    type: String,
-    required: true,
-  },
+  dateofbooking: { type: String, default: "" },
+  originstation: { type: String, default: "" },
+  deliverystation: { type: String, default: "" },
+  noofpackages: { type: Number, default: 0 },
+  chargedweight: { type: String, default: "" },
+  status: { type: String, default: "" },
+  deliverytype: { type: String, default: "" },
+  updated: { type: String, default: "" },
+  history: { type: [{ s: String, t: String, _id: false }], default: [] },
 });
 
 const Order = models.Order || model("Order", OrderSchema);
